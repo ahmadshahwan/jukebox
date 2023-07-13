@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let track of tracks; let i = index" [ngStyle]="trackStyle(track)">
+        {{ track.title }}
+        <button (click)="play(i)" [disabled]="track.error">Play</button> 
+        <button (click)="download(track)" [disabled]="track.error">Download</button> 
+        <button (click)="remove(i)">Delete</button>
+    </li>
+</ul>

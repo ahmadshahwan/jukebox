@@ -1,0 +1,9 @@
+<div *ngIf="title">
+    <p>{{ title }}</p>
+    <div>
+        <button (click)="toggle()">{{ isPlaying ? "Pause" : "Resume" }}</button>
+    </div>
+    <div>
+        <progress [value]="progress" max="1" (click)="onProgressClick($event)"></progress>
+    </div>
+</div>
