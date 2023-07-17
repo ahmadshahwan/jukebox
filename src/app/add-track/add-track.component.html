@@ -1,29 +1,28 @@
-<h1>New track</h1>
-  <form>
-    <label for="track-source-select">Select method </label>
-    <select
-        id="track-source-select"
-        name="track-source-select" 
-        [(ngModel)]="trackSourceSelector">
-      <option value="URL">From ULR</option>
-      <option value="Local">From local file</option>
-    </select>
-    <div *ngIf="trackSourceSelector == 'URL'">
-      <label for="track-url">Track URL </label>
-      <input
-          type="text"
-          id="track-url"
-          name="track-url"
-          [(ngModel)]="trackURL" />
-      <button *ngIf="!!trackURL" (click)="addURL()">Add</button>
-    </div>
-    <div *ngIf="trackSourceSelector == 'Local'">
-      <label for="track-file">Track file </label>
-      <input
-          type="file"
-          id="track-file"
-          name="track-file"
-          (change)="onTrackFileChanged($event)" />
-          <button *ngIf="!!trackFile" (click)="addFile()">Add</button>
-    </div>
-  </form>
+<form>
+  <label for="track-source-select">Select method </label>
+  <select
+      id="track-source-select"
+      name="track-source-select" 
+      [(ngModel)]="trackSourceSelector">
+    <option value="URL">From ULR</option>
+    <option value="Local">From local file</option>
+  </select>
+  <div *ngIf="trackSourceSelector == 'URL'">
+    <label for="track-url">Track URL </label>
+    <input
+        type="text"
+        id="track-url"
+        name="track-url"
+        [(ngModel)]="trackURL" />
+    <button *ngIf="!!trackURL" (click)="addURL()">Add</button>
+  </div>
+  <div *ngIf="trackSourceSelector == 'Local'">
+    <label for="track-file">Track file </label>
+    <input
+        type="file"
+        id="track-file"
+        name="track-file"
+        (change)="onTrackFileChanged($event)" />
+        <button *ngIf="!!trackFile" (click)="addFile()">Add</button>
+  </div>
+</form>

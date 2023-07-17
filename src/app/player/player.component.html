@@ -1,6 +1,6 @@
-<div *ngIf="title">
-    <p>{{ title }}</p>
+<div *ngIf="title" class="player">
     <div>
+        <span>{{ title }}</span>
         <button (click)="toggle()">{{ isPlaying ? "Pause" : "Resume" }}</button>
     </div>
     <div>

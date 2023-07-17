@@ -1,11 +1,14 @@
-<section>
-  <app-add-track (trackAdded)="onTrackAdded($event)"></app-add-track>
-</section>
-<section>
-  <h1>Playlist</h1>
-  <app-playlist></app-playlist>
-</section>
-<section>
-  <h1>Player</h1>
-  <app-player></app-player>
-</section>
+<div>
+  <section>
+    <h1>New track</h1>
+    <app-add-track (trackAdded)="onTrackAdded($event)"></app-add-track>
+  </section>
+  <section>
+    <h1>Playlist</h1>
+    <app-playlist></app-playlist>
+  </section>
+  <section>
+    <h1>Player</h1>
+    <app-player></app-player>
+  </section>
+</div>
