@@ -1,0 +1,10 @@
+<section>
+<h2>Playlist</h2>
+    <ol>
+        <li *ngFor="let track of tracks; let i = index">
+            <span [ngStyle]=" { 'font-weight' : isCurrentTrack(track) ? 'bold' : undefined } ">{{ track.title }}</span>
+            <button (click)="play(i)" [disabled]="track.hasError">></button>
+            <button (click)="remove(i)">X</button>
+        </li>
+    </ol>
+</section>

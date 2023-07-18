@@ -1,0 +1,10 @@
+<section>
+    <h2>Playing now</h2>
+    <div>
+        <span>Current track: {{ currentTrack?.title || "none" }}</span>
+    </div>
+    <div *ngIf="currentTrack">
+        <button (click)="togglePlay()">{{ isPaused ? ">" : "||" }}</button>
+        <progress [value]="progress" (click)="onProgressClick($event)"></progress>
+    </div>
+</section>
